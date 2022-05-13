@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Project Part II: Screen (Front-End) Layout Design</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <form class="form" id="myForm" onsubmit="handleSubmit()" method="get" action="page2.html">
+    <label for="teamname">Team's Name: </label>
+    <input type="text" id="teamname" name="teamname" onfocus="teamNameFocus()" onblur="teamNameBlur()"><br/><br/><br/>
+
+    <!-- player 1 -->
+    <label for="name1">Player 1 Name: </label>
+    <input type="text" id="name1" name="name1" onfocus="name1Focus()" onblur="name1Blur()"><br/><br/>
+
+    <label for="age1">Player 1 Age: </label>
+    <input type="number" id="age1" name="age1" min="1" max="100" onfocus="age1Focus()" onblur="age1Blur()"><br/><br/>
+
+    <label for="height1">Player 1 Height (in meters): </label>
+    <input type="number" id="height1" name="height1" onfocus="height1Focus()" onblur="height1Blur()"><br/><br/>
+    <label for="pos1">Player 1 Position (type the whole word for the position ex. Center): </label>
+    <select name="position1" id="pos1">
+      <option value="position">Select Position</option>
+      <option value="PG">Point Guard</option>
+      <option value="SG">Shooting Guard</option>
+      <option value="SF">Short Forward</option>
+      <option value="PF">Power Forward</option>
+      <option value="C">Center</option>
+      <option value="sub1">Substitution 1</option>
+      <option value="sub2">Substitution 2</option>
+    </select><br/><br/>
+    <label for="email1">Player 1 Email: </label>
+    <input type="email" id="email1" name="email1" onfocus="email1Focus()" onblur="email1Blur()"><br/><br/>
+
+    <label for="school1">Player 1 School / Campus (If you're from Pisay, then type PSHS and your campus ex. PSHS-MC. If not, then only type the name of your school): </label>
+    <input type="text" id="school1" name="school1" onfocus="name1Focus()" onblur="school1Blur()"><br/><br/>
+    <label for="cnumber1">Player 1 Contact Number: </label>
+    <input type="tel" id="cnumber1" name="cnumber1" onfocus="cnumber1Focus()" onblur="cnumber1Blur()"><br/><br/>
+
+    <label for="gname1">Player 1 Guardian's Name (fullname): </label>
+    <input type="text" id="gname1" name="gname1" onfocus="gname1Focus()" onblur="cnumber1Blur()"><br/><br/>
+
+     <label for="gnumber1">Player 1 Guardian's Contact Number: </label>
+    <input type="tel" id="gnumber1" name="gnumber1" onfocus="gnumber1Focus()" onblur="cnumber1Blur()"><br/><br/>
+    
+    <label for="comorbidity1">Player 1 Comorbidities (Write "NONE" if you don't have any comorbidities): </label>
+    <textarea id="tArea1" name="comorbidity1" rows="4" cols="50" onfocus="tArea1Focus()" onblur="tArea1Blur()"> </textarea><br/><br/><br/>
+  
+    <!-- player 2 -->
+    <label for="name2">Player 2 Name: </label>
+    <input type="text" id="name2" name="name2" onfocus="name2Focus()" onblur="name2Blur()"><br/><br/>
+
+    <label for="age2">Player 2 Age: </label>
+    <input type="number" id="age2" name="age2" min="1" max="100" onfocus="age2Focus()" onblur="age2Blur()"><br/><br/>
+    
+    <label for="height2">Player 2 Height (in meters): </label>
+    <input type="number" id="height2" name="height2" onfocus="height2Focus()" onblur="height2Blur()"><br/><br/>
+    
+    <label for="pos2">Player 2 Position (type the whole word for the position ex. Center): </label>
+    <select name="position2" id="pos2">
+      <option value="position">Select Position</option>
+      <option value="PG">Point Guard</option>
+      <option value="SG">Shooting Guard</option>
+      <option value="SF">Short Forward</option>
+      <option value="PF">Power Forward</option>
+      <option value="C">Center</option>
+      <option value="sub1">Substitution 1</option>
+      <option value="sub2">Substitution 2</option>
+    </select><br/><br/>
+    
+    <label for="email2">Player 2 Email: </label>
+    <input type="email" id="email2" name="email2" onfocus="email2Focus()" onblur="email2Blur()"><br/><br/>
+
+    <label for="school2">Player 2 School / Campus (If you're from Pisay, then type PSHS and your campus ex. PSHS-MC. If not, then only type the name of your school): </label>
+    <input type="text" id="school2" name="school2" onfocus="school2Focus()" onblur="school2Blur()"><br/><br/>
+
+    <label for="cnumber2">Player 2 Contact Number: </label>
+    <input type="tel" id="cnumber2" name="cnumber2" onfocus="cnumber2Focus()" onblur="cnumber2Blur()"><br/><br/>
+
+    <label for="gname2">Player 2 Guardian's Name (fullname): </label>
+    <input type="text" id="gname2" name="gname2" onfocus="gname2Focus()" onblur="cnumber2Blur()"><br/><br/>
+
+    <label for="gnumber2">Player 2 Guardian's Contact Number: </label>
+    <input type="tel" id="gnumber2" name="gnumber2" onfocus="gnumber2Focus()" onblur="cnumber2Blur()"><br/><br/>
+    
+    <label for="comorbidity2">Player 2 Comorbidities (Write "NONE" if you don't have any comorbidities): </label>
+    <textarea id="tArea2" name="comorbidity2" rows="4" cols="50" onfocus="tArea2Focus()" onblur="tArea2Blur()"> </textarea><br/><br/><br/>
+
+    
+     <!-- player 3 -->
+    <label for="name3">Player 3 Name: </label>
+    <input type="text" id="name3" name="name3" onfocus="name3Focus()" onblur="name3Blur()"><br/><br/>
+    
+    <label for="age3">Player 3 Age: </label>
+    <input type="number" id="age3" name="age3" min="1" max="100" onfocus="age3Focus()" onblur="age3Blur()"><br/><br/>
+
+    <label for="height3">Player 3 Height (in meters): </label>
+    <input type="number" id="height3" name="height3" onfocus="height3Focus()" onblur="height3Blur()"><br/><br/>
+    
+    <label for="pos3">Player 3 Position (type the whole word for the position ex. Center): </label>
+    <select name="position3" id="pos3">
+      <option value="position">Select Position</option>
+      <option value="PG">Point Guard</option>
+      <option value="SG">Shooting Guard</option>
+      <option value="SF">Short Forward</option>
+      <option value="PF">Power Forward</option>
+      <option value="C">Center</option>
+      <option value="sub1">Substitution 1</option>
+      <option value="sub2">Substitution 2</option>
+    </select><br/><br/>
+    <label for="email3">Player 3 Email: </label>
+    <input type="email" id="email3" name="email3" onfocus="email3Focus()" onblur="email3Blur()"><br/><br/>
+
+    <label for="school3">Player 3 School / Campus (If you're from Pisay, then type PSHS and your campus ex. PSHS-MC. If not, then only type the name of your school): </label>
+    <input type="text" id="school3" name="school3" onfocus="school3Focus()" onblur="school3Blur()"><br/><br/>
+
+    <label for="cnumber3">Player 3 Contact Number: </label>
+    <input type="tel" id="cnumber3" name="cnumber3" onfocus="cnumber3Focus()" onblur="cnumber3Blur()"><br/><br/>
+    
+    <label for="gname3">Player 3 Guardian's Name (fullname): </label>
+    <input type="text" id="gname3" name="gname3" onfocus="gname3Focus()" onblur="cnumber3Blur()"><br/><br/>
+
+    <label for="gnumber3">Player 3 Guardian's Contact Number: </label>
+    <input type="tel" id="gnumber3" name="gnumber3" onfocus="gnumber3Focus()" onblur="cnumber3Blur()"><br/><br/>
+    
+    <label for="comorbidity3">Player 3 Comorbidities (Write "NONE" if you don't have any comorbidities): </label>
+    <textarea id="tArea3" name="comorbidity3" rows="4" cols="50" onfocus="tArea3Focus()" onblur="tArea3Blur()"> </textarea><br/><br/><br/>
+    
+    <!-- player 4 -->
+    <label for="name4">Player 4 Name: </label>
+    <input type="text" id="name4" name="name4" onfocus="name4Focus()" onblur="name4Blur()"><br/><br/>
+    
+    <label for="age4">Player 4 Age: </label>
+    <input type="number" id="age4" name="age4" min="1" max="100" onfocus="age4Focus()" onblur="age4Blur()"><br/><br/>
+
+    <label for="height4">Player 4 Height (in meters): </label>
+    <input type="number" id="height4" name="height4" onfocus="height4Focus()" onblur="height4Blur()"><br/><br/>
+    
+    <label for="pos4">Player 4 Position (type the whole word for the position ex. Center): </label>
+    <select name="position3" id="pos4">
+      <option value="position">Select Position</option>
+      <option value="PG">Point Guard</option>
+      <option value="SG">Shooting Guard</option>
+      <option value="SF">Short Forward</option>
+      <option value="PF">Power Forward</option>
+      <option value="C">Center</option>
+      <option value="sub1">Substitution 1</option>
+      <option value="sub2">Substitution 2</option>
+    </select><br/><br/>
+    <label for="email4">Player 4 Email: </label>
+    <input type="email" id="email4" name="email4" onfocus="email4Focus()" onblur="email4Blur()"><br/><br/>
+
+    <label for="school4">Player 4 School / Campus (If you're from Pisay, then type PSHS and your campus ex. PSHS-MC. If not, then only type the name of your school): </label>
+    <input type="text" id="school4" name="school4" onfocus="school4Focus()" onblur="school4Blur()"><br/><br/>
+
+    <label for="cnumber4">Player 4 Contact Number: </label>
+    <input type="tel" id="cnumber4" name="cnumber4" onfocus="cnumber4Focus()" onblur="cnumber4Blur()"><br/><br/>
+
+    <label for="gname4">Player 4 Guardian's Name (fullname): </label>
+    <input type="text" id="gname4" name="gname4" onfocus="gname4Focus()" onblur="cnumber4Blur()"<br/><br/>
+
+    <label for="gnumber4">Player 4 Guardian's Contact Number: </label>
+    <input type="tel" id="gnumber4" name="gnumber4" onfocus="gnumber4Focus()" onblur="cnumber4Blur()"><br/><br/>
+
+    <label for="comorbidity4">Player 4 Comorbidities (Write "NONE" if you don't have any comorbidities): </label>
+    <textarea id="tArea4" name="comorbidity4" rows="4" cols="50" onfocus="tArea4Focus()" onblur="tArea4Blur()"> </textarea><br/><br/><br/>
+
+    
+    
+    <!-- player 5 -->
+    <label for="name5">Player 5 Name: </label>
+    <input type="text" id="name5" name="name5" onfocus="name5Focus()" onblur="name5Blur()"><br/><br/>
+    
+    <label for="age5">Player 5 Age: </label>
+    <input type="number" id="age5" name="age5" min="1" max="100" onfocus="age5Focus()" onblur="age5Blur()"><br/><br/>
+
+    <label for="height5">Player 5 Height (in meters): </label>
+    <input type="number" id="height5" name="height5" onfocus="height5Focus()" onblur="height5Blur()"><br/><br/>
+
+    <label for="pos5">Player 5 Position (type the whole word for the position ex. Center): </label>
+    <select name="position5" id="pos5">
+      <option value="position">Select Position</option>
+      <option value="PG">Point Guard</option>
+      <option value="SG">Shooting Guard</option>
+      <option value="SF">Short Forward</option>
+      <option value="PF">Power Forward</option>
+      <option value="C">Center</option>
+      <option value="sub1">Substitution 1</option>
+      <option value="sub2">Substitution 2</option>
+    </select><br/><br/>
+    
+    <label for="email5">Player 5 Email: </label>
+    <input type="email" id="email5" name="email5" onfocus="email5Focus()" onblur="email5Blur()"><br/><br/>
+
+    <label for="school5">Player 5 School / Campus (If you're from Pisay, then type PSHS and your campus ex. PSHS-MC. If not, then only type the name of your school): </label>
+    <input type="text" id="school5" name="school5" onfocus="school5Focus()" onblur="school5Blur()"><br/><br/>
+
+    <label for="cnumber5">Player 5 Contact Number: </label>
+    <input type="tel" id="cnumber5" name="cnumber5" onfocus="cnumber5Focus()" onblur="cnumber5Blur()"><br/><br/>
+
+    <label for="gname5">Player 5 Guardian's Name (fullname): </label>
+    <input type="text" id="gname5" name="gname5" onfocus="gname5Focus()" onblur="cnumber5Blur()"><br/><br/>
+
+     <label for="gnumber5">Player 5 Guardian's Contact Number: </label>
+    <input type="tel" id="gnumber5" name="gnumber5" onfocus="gnumber5Focus()" onblur="cnumber5Blur()"><br/><br/>
+    
+    <label for="comorbidity5">Player 5 Comorbidities (Write "NONE" if you don't have any comorbidities): </label>
+    <textarea id="tArea5" name="comorbidity5" rows="4" cols="50" onfocus="tArea5Focus()" onblur="tArea5Blur()"> </textarea><br/><br/><br/>
+    
+    <!-- player 6 -->
+    <label for="name6">Player 6 Name: </label>
+    <input type="text" id="name6" name="name6" onfocus="name6Focus()" onblur="name6Blur()"><br/><br/>
+    
+    <label for="age6">Player 6 Age: </label>
+    <input type="number" id="age6" name="age6" min="1" max="100" onfocus="age6Focus()" onblur="age6Blur()"><br/><br/>
+
+    <label for="height6">Player 6 Height (in meters): </label>
+    <input type="number" id="height6" name="height6" onfocus="height6Focus()" onblur="height6Blur()"><br/><br/>
+
+    <label for="pos6">Player 6 Position (type the whole word for the position ex. Center): </label>
+    <select name="position6" id="pos6">
+      <option value="position">Select Position</option>
+      <option value="PG">Point Guard</option>
+      <option value="SG">Shooting Guard</option>
+      <option value="SF">Short Forward</option>
+      <option value="PF">Power Forward</option>
+      <option value="C">Center</option>
+      <option value="sub1">Substitution 1</option>
+      <option value="sub2">Substitution 2</option>
+    </select><br/><br/>
+    
+    <label for="email6">Player 6 Email: </label>
+    <input type="email" id="email6" name="email6" onfocus="email6Focus()" onblur="email6Blur()"><br/><br/>
+
+     <label for="school6">Player 6 School / Campus (If you're from Pisay, then type PSHS and your campus ex. PSHS-MC. If not, then only type the name of your school): </label>
+    <input type="text" id="school6" name="school6" onfocus="school6Focus()" onblur="school6Blur()"><br/><br/>
+
+    <label for="cnumber6">Player 6 Contact Number: </label>
+    <input type="tel" id="cnumber6" name="cnumber6" onfocus="cnumber6Focus()" onblur="cnumber6Blur()"><br/><br/>
+    
+     <label for="gname6">Player 6 Guardian's Name (fullname): </label>
+    <input type="text" id="gname6" name="gname6" onfocus="gname6Focus()" onblur="cnumber6Blur()"><br/><br/>
+
+    <label for="gnumber6">Player 6 Guardian's Contact Number: </label>
+    <input type="tel" id="gnumber6" name="gnumber6" onfocus="gnumber6Focus()" onblur="cnumber6Blur()"><br/><br/>
+    
+    <label for="comorbidity6">Player 6 Comorbidities (Write "NONE" if you don't have any comorbidities): </label>
+    <textarea id="tArea6" name="comorbidity6" rows="4" cols="50" onfocus="tArea6Focus()" onblur="tArea6Blur()"> </textarea><br/><br/><br/>
+    
+    <!-- player 7 -->
+    <label for="name7">Player 7 Name: </label>
+    <input type="text" id="name7" name="name7" onfocus="name7Focus()" onblur="name7Blur()"><br/><br/>
+    
+    <label for="age7">Player 7 Age: </label>
+    <input type="number" id="age7" name="age7" min="1" max="100" onfocus="age7Focus()" onblur="age7Blur()"><br/><br/>
+
+    <label for="height7">Player 7 Height (in meters): </label>
+    <input type="number" id="height7" name="height7" onfocus="height7Focus()" onblur="height7Blur()"><br/><br/>
+
+    <label for="pos7">Player 7 Position (type the whole word for the position ex. Center): </label>
+    <select name="position7" id="pos7">
+      <option value="position">Select Position</option>
+      <option value="PG">Point Guard</option>
+      <option value="SG">Shooting Guard</option>
+      <option value="SF">Short Forward</option>
+      <option value="PF">Power Forward</option>
+      <option value="C">Center</option>
+      <option value="sub1">Substitution 1</option>
+      <option value="sub2">Substitution 2</option>
+    </select><br/><br/>
+    
+    <label for="email7">Player 7 Email: </label>
+    <input type="email" id="email7" name="email7" onfocus="email7Focus()" onblur="email7Blur()"><br/><br/>
+
+    <label for="school7">Player 7 School / Campus (If you're from Pisay, then type PSHS and your campus ex. PSHS-MC. If not, then only type the name of your school): </label>
+    <input type="text" id="school7" name="school7" onfocus="school7Focus()" onblur="school7Blur()"><br/><br/>
+
+    <label for="cnumber6">Player 7 Contact Number: </label>
+    <input type="tel" id="cnumber7" name="cnumber7" onfocus="cnumber7Focus()" onblur="cnumber7Blur()"><br/><br/>
+
+    <label for="gname7">Player 7 Guardian's Name (fullname): </label>
+    <input type="text" id="gname7" name="gname7" onfocus="gname7Focus()" onblur="cnumber7Blur()"><br/><br/>
+    
+    <label for="gnumber7">Player 7 Guardian's Contact Number: </label>
+    <input type="tel" id="gnumber7" name="gnumber7" onfocus="gnumber7Focus()"onblur="cnumber7Blur()"><br/><br/>
+    
+    <label for="comorbidity7">Player 7 Comorbidities (Write "NONE" if you don't have any comorbidities): </label>
+    <textarea id="tArea7" name="comorbidity7" rows="4" cols="50" onfocus="tArea7Focus()" onblur="tArea7Blur()"> </textarea><br/><br/><br/>
+
+     <button type="submit" value="Submit">Submit</button>
+     <button type="reset" value="Reset">Reset</button>
+
+    <input type="button" value="Next" onclick="window.location.href='page2.html'" />
+
+  </form>
+
+</body>
+
+</html>

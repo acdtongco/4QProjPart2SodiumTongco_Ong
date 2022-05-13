@@ -1,0 +1,20 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background: lightgreen;
+}
+
+h2 {
+  text-align: center;
+  border: 5px solid blue;
+}
+
+form {
+  border: 5px solid yellow;
+  background: lightgreen;
+}
+
+div {
+  border: 3px red;
+}
+
